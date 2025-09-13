@@ -2,7 +2,7 @@
 data <- read.csv("C:/Users/OneDrive/Desktop/Dataset.csv")  
 
 
-# Make a basic volcano plot
+# Make a volcano plot
 with(data, plot(log2FoldChange , -log10(pvalue),
                 pch=20, main="Volcano Plot",
                 xlab="log2FoldChange", ylab="-Log10(p-value)"))
@@ -31,4 +31,5 @@ top5_down <- head(downregulated[order(downregulated$pvalue), ], 5)
 
 top5_up$Gene
 top5_down$Gene
+
 
