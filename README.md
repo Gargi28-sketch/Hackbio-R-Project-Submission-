@@ -33,6 +33,7 @@ The goal of this project is to identify **differentially expressed genes (DEGs)*
 
 ---
 5.**Functions of the top 5 upregulated genes and top 5 downregulated genes**
+                      
                        **Upregulated gene** 
 " EMILIN2 "   " POU3F4 "    " LOC285954 " " VEPH1 "     " DTHD1 "    
 
