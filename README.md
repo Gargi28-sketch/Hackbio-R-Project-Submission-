@@ -48,16 +48,19 @@ The goal of this project is to identify **differentially expressed genes (DEGs)*
 - Elastin Microfibril Interfacer 2
 -Predicted to enable extracellular matrix constituent conferring elasticity. Involved in several processes, including positive regulation of angiogenesis; positive regulation of Défense response to bacterium; and positive regulation of platelet aggregation.
 - Located in extracellular region. EMILIN2 is an extracellular matrix (ECM) glycoprotein that has roles in various biological processes, including vascular stability, bone marrow function, and cell signaling. It is also known as elastin microfibril interface 2 and has been found to act as a Tumor suppressor in some contexts by promoting apoptosis and inhibiting cell growth. Its expression is frequently down-regulated in several types of cancer, such as colorectal, gastric, and breast cancer. 
+
 **POU3F4 **
-  
+
 - POU Class 3 Homeobox 4
 -POU3F4 is a gene that provides instructions for making a protein, a type of transcription factor, crucial for neural and inner ear development. This family member plays a role in inner ear development. The protein is thought to be involved in the mediation of epigenetic signals which induce striatal neuron-precursor differentiation. Mutations in this gene are associated with X chromosome-linked nonsyndromic mixed deafness. Probable transcription factor which exert its primary action widely during early neural development and in a very limited set of neurons in the mature brain.
+
 **LOC285954 **
-  
+
 - INHBA Antisense RNA 1
 -INHBA-AS1 (INHBA Antisense RNA 1) is an RNA Gene, and is affiliated with the lncRNA class. Diseases associated with INHBA-AS1 include Colorectal Cancer.
+
 **VEPH1**
-  
+
 - Ventricular Zone Expressed PH Domain Containing 1 
 -Enable phosphatidylinositol-5-phosphate binding activity. Involved in negative regulation of SMAD protein signal transduction and negative regulation of transforming growth factor beta receptor signaling pathway. Predicted to be located in endomembrane system and membrane and  active in plasma membrane.
  ** DTHD1**
@@ -75,11 +78,13 @@ The goal of this project is to identify **differentially expressed genes (DEGs)*
 -This gene is a member of a phylogenetically conserved family of genes that share a common DNA-binding domain, the T-box. T-box genes encode transcription factors involved in the regulation of developmental processes. 
 -This gene is closely linked to related family member T-box 3 (ulnar mammary syndrome) on human chromosome 12. The encoded protein may play a role in heart development and specification of limb identity. Mutations in this gene have been associated with Holt-Oram syndrome, a developmental disorder affecting the heart and upper limbs. 
 -Several transcript variants encoding different isoforms have been described for this gene. DNA-binding protein that regulates the transcription of several genes and is involved in heart development and limb pattern formation.
- **IFITM1 **
+
+  **IFITM1 **
   
 - Interferon Induced Transmembrane Protein 1 
 - Interferon-induced transmembrane (IFITM) proteins are a family of interferon induced antiviral proteins. The family contains five members, including IFITM1, IFITM2 and IFITM3 that belong to the CD225 superfamily. The protein encoded by this gene restricts cellular entry by diverse viral pathogens, such as influenza A virus, Ebola virus and Sars-CoV-2. 
 - IFN-induced antiviral protein which inhibits the entry of viruses to the host cell cytoplasm, permitting endocytosis, but preventing subsequent viral fusion and release of viral contents into the cytosol. Active against multiple viruses, including influenza A virus, SARS coronaviruses (SARS-CoV and SARS-CoV-2), Marburg virus (MARV), Ebola virus (EBOV), Dengue virus (DNV), West Nile virus (WNV), human immunodeficiency virus type 1 (HIV-1) and hepatitis C virus (HCV)
+
 **LAMA2 **
   
 - Laminin Subunit Alpha 2 
@@ -98,7 +103,8 @@ The goal of this project is to identify **differentially expressed genes (DEGs)*
 Acts as an accessory protein in conjunction with CAV1 in targeting to lipid rafts and driving caveolae formation. The Ser-36 phosphorylated form has a role in modulating mitosis in endothelial cells.
 - Positive regulator of cellular mitogenesis of the MAPK signaling pathway.
 Required for the insulin-stimulated nuclear translocation and activation of MAPK1 and STAT3, and the subsequent regulation of cell cycle progression (By similarity).
-  **TNN **
+
+   **TNN **
   
 - Tenascin N
 - Predicted to enable integrin binding activity. Involved in positive regulation of sprouting angiogenesis; regulation of cell adhesion; and regulation of cell migration. 
