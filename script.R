@@ -1,8 +1,6 @@
 # ---------------------------
 # STEP 1: Load Required Packages
 # ---------------------------
-# Install packages once if not already installed
-# install.packages(c("ggplot2", "dplyr"))
 
 install.packages("ggplot2")
 library(ggplot2)  # for visualization
@@ -80,6 +78,7 @@ print(volcano)
 # ---------------------------
 write.csv(up_genes, "Upregulated_Genes.csv", row.names=FALSE)
 write.csv(down_genes, "Downregulated_Genes.csv", row.names=FALSE)
+
 
 
 
