@@ -95,7 +95,6 @@ The protein is predicted to interact with RNA polymerase II, the enzyme responsi
 •	Nuclear Localization:
 ZNF391 is active in the nucleus, the cellular compartment where transcription and DNA regulation occur
 
-6.**Click here to view the Full Script -https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/5f5b8a40fb70b2e9d653beae3da8ffecc5cb68e1/script.R**
+6.**Click here to view the Full Script -https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/f8834e2dfd4f753de82c545aba686a48963f9bdb/script.R**
 
-7.**Click here to view the Volcano Plot- https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/5f5b8a40fb70b2e9d653beae3da8ffecc5cb68e1/volcano%20plot.png**
-
+7.**Click here to view the Volcano Plot- 
