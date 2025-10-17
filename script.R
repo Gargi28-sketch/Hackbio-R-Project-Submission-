@@ -10,7 +10,7 @@ install.packages("dplyr")
 library(dplyr)    # for data manipulation
 
 # ---------------------------
-# STEP 2: Import Your Dataset
+# STEP 2: Import the Dataset
 # ---------------------------
 # Replace with your actual CSV path
 data <- read.csv("C:/Users/dgdur/OneDrive/Desktop/Dataset.csv")
@@ -42,13 +42,13 @@ data$Significance <- ifelse(data$log2FoldChange > 1 & data$pvalue < 0.01, "Upreg
 table(data$Significance)
 
 # ---------------------------
-# STEP 5: Extract Up/Downregulated Genes
+# STEP 5: Extract Upregulated and Downregulated Genes
 # ---------------------------
 up_genes <- data %>% filter(Significance == "Upregulated")
 down_genes <- data %>% filter(Significance == "Downregulated")
 
 # ---------------------------
-# STEP 6: Print Top 5 Gene Names Only
+# STEP 6: Print Top 5 Gene Names (upregulate and downregulate)  
 # ---------------------------
 cat("Top 5 Upregulated Genes:\n")
 print(head(up_genes$Gene, 5))
@@ -80,6 +80,7 @@ print(volcano)
 # ---------------------------
 write.csv(up_genes, "Upregulated_Genes.csv", row.names=FALSE)
 write.csv(down_genes, "Downregulated_Genes.csv", row.names=FALSE)
+
 
 
 
