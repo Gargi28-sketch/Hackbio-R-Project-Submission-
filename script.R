@@ -1,42 +1,64 @@
-
+# ---------------------------
 # STEP 1: Load Required Packages
-# Install once if not done:
+# ---------------------------
+# Install packages once if not already installed
+# install.packages(c("ggplot2", "dplyr"))
 
 install.packages("ggplot2")
 library(ggplot2)  # for visualization
 install.packages("dplyr")
 library(dplyr)    # for data manipulation
 
-
-# STEP 2: Import the Dataset
+# ---------------------------
+# STEP 2: Import Your Dataset
+# ---------------------------
+# Replace with your actual CSV path
 data <- read.csv("C:/Users/dgdur/OneDrive/Desktop/Dataset.csv")
 
-# Check the first few rows
+# Quick check
 head(data)
+colnames(data)  # Should show: Gene, log2FoldChange, pvalue, padj
 
-# Check column names
-colnames(data)
-
+# ---------------------------
 # STEP 3: Basic Data Transformation
-
-# Ensure the columns are numeric
+# ---------------------------
+# Ensure numeric columns
 data$log2FoldChange <- as.numeric(data$log2FoldChange)
 data$pvalue <- as.numeric(data$pvalue)
 
-# Transform p-values for volcano plot visualization
+# Transform p-values for volcano plot (-log10)
 data$negLog10P <- -log10(data$pvalue)
 
-
-# STEP 4: Define Significance 
+# ---------------------------
+# STEP 4: Classify Significance
+# ---------------------------
+# Upregulated: Log2FC > 1 & pvalue < 0.01
+# Downregulated: Log2FC < -1 & pvalue < 0.01
 data$Significance <- ifelse(data$log2FoldChange > 1 & data$pvalue < 0.01, "Upregulated",
                             ifelse(data$log2FoldChange < -1 & data$pvalue < 0.01, "Downregulated",
                                    "Not Significant"))
 
-#Step 5: Check if it worked
+# Check how many in each category
 table(data$Significance)
 
+# ---------------------------
+# STEP 5: Extract Up/Downregulated Genes
+# ---------------------------
+up_genes <- data %>% filter(Significance == "Upregulated")
+down_genes <- data %>% filter(Significance == "Downregulated")
 
-# STEP 6: Volcano plot
+# ---------------------------
+# STEP 6: Print Top 5 Gene Names Only
+# ---------------------------
+cat("Top 5 Upregulated Genes:\n")
+print(head(up_genes$Gene, 5))
+
+cat("\nTop 5 Downregulated Genes:\n")
+print(head(down_genes$Gene, 5))
+
+# ---------------------------
+# STEP 7: Volcano Plot
+# ---------------------------
 volcano <- ggplot(data, aes(x=log2FoldChange, y=negLog10P, color=Significance)) +
   geom_point(alpha=0.8, size=2) +
   scale_color_manual(values=c("Upregulated"="red",
@@ -45,33 +67,19 @@ volcano <- ggplot(data, aes(x=log2FoldChange, y=negLog10P, color=Significance)) 
   geom_vline(xintercept=c(-1,1), linetype="dashed") +
   geom_hline(yintercept=-log10(0.01), linetype="dashed") +
   theme_minimal() +
-  labs(title="Volcano Plot", x="Log2 Fold Change", y="-Log10(p-value)") +
+  labs(title="Volcano Plot of RNA-seq Data",
+       x="Log2 Fold Change",
+       y="-Log10(p-value)") +
   theme(plot.title = element_text(hjust=0.5))
 
-# Display plot in RStudio / R plot window
+# Display the volcano plot
 print(volcano)
 
-# STEP 6: Extract Up/Downregulated Genes
-up_genes <- data %>% filter(log2FoldChange > 1 & pvalue < 0.01)
-down_genes <- data %>% filter(log2FoldChange < -1 & pvalue < 0.01)
-
-head(up_genes, 5)
-head(down_genes, 5)
-
-# Top 5 upregulated genes (names only)
-cat("Top 5 Upregulated Genes:\n")
-print(head(up_genes$Gene, 5))   # Replace 'Gene' with your column name if different
-
-# Top 5 downregulated genes (names only)
-cat("\nTop 5 Downregulated Genes:\n")
-print(head(down_genes$Gene, 5)) # Replace 'Gene' with your column name if different
-
-
-# STEP 7: Save the Results 
-write.csv(up_genes, "Upregulated_Genes.csv", row.names = FALSE)
-write.csv(down_genes, "Downregulated_Genes.csv", row.names = FALSE)
-
-
+# ---------------------------
+# STEP 8: Save Full Lists 
+# ---------------------------
+write.csv(up_genes, "Upregulated_Genes.csv", row.names=FALSE)
+write.csv(down_genes, "Downregulated_Genes.csv", row.names=FALSE)
 
 
 
