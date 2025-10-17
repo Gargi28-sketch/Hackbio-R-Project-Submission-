@@ -34,8 +34,10 @@ The goal of this project is to identify **differentially expressed genes (DEGs)*
 
 5.**Click here to view the Full Script -https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/f8834e2dfd4f753de82c545aba686a48963f9bdb/script.R**
 
+
 6.**Click here to view the Volcano Plot- https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/d5413eecc72c15675e536543c8ef1f39588b5a54/Volcano%20Plot.pdf**
----
+
+
 7.**Functions of the top 5 upregulated genes and top 5 downregulated genes**
                       
                        **Upregulated gene** 
