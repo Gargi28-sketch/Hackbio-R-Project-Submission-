@@ -60,12 +60,13 @@ The following files are created:
 
 | **File**                    | **Description** |
 |-----------------------------|------------------|
-| **Upregulated_Genes.csv**   | List of significantly upregulated genes |
+| **Upregulated_Genes.csv**   | List of significantly upregulated genes | 
 | **Downregulated_Genes.csv** | List of significantly downregulated genes |
 
 Columns included:  
 **Gene, log2FoldChange, pvalue, padj, negLog10Padj, Significance**
-
+**Upregulated_Genes.csv**- Refer to the csv file **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/38b782178ee22bb2bfd5f425b1619f1efca77d6a/Downregulated_Genes.csv**
+**Downregulated_Genes.csv** - Refer to the csv file ****
 ---
 
 ### **5. Volcano Plot**
