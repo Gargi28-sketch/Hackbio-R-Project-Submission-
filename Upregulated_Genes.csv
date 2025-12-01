@@ -1,0 +1,6 @@
+"Gene","log2FoldChange","pvalue","padj","negLog10Padj","Significance"
+" EMILIN2 ",1.53,2.98e-06,0.01,2,"Upregulated"
+" POU3F4 ",1.18,1.06e-05,0.02,1.69897000433602,"Upregulated"
+" LOC285954 ",1.05,1.46e-05,0.02,1.69897000433602,"Upregulated"
+" VEPH1 ",1.14,2.21e-05,0.02,1.69897000433602,"Upregulated"
+" DTHD1 ",1.54,5.59e-05,0.04,1.39794000867204,"Upregulated"
