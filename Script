@@ -28,7 +28,7 @@ data$log2FoldChange <- as.numeric(data$log2FoldChange)
 data$pvalue <- as.numeric(data$pvalue)
 data$padj <- as.numeric(data$padj)
 
-# Transform p-values for volcano plot (-log10)
+# **TRANSFORM p-values for volcano plot (-log10)**
 data$negLog10Padj <- -log10(data$padj)
 
 
