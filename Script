@@ -97,9 +97,6 @@ volcano <- ggplot(data, aes(x = log2FoldChange, y = negLog10Padj, color = Signif
 # Display the plot
 print(volcano)
 
-# ---------------------------
-# Optional: Save the plot as PNG
-# ---------------------------
-ggsave("Volcano_Plot.png", plot = volcano, width = 8, height = 6)
+
 
 
