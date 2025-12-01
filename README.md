@@ -1,46 +1,78 @@
-# RNA-seq Differential Expression Analysis
+**RNA-seq Differential Expression Analysis**
+This repository contains an analysis comparing a diseased cell line vs the same cell line treated with compound X.
+The goal is to identify differentially expressed genes (DEGs), generate a volcano plot, and interpret the top significant genes.
 
-This repository contains the analysis of RNA-seq data comparing a **diseased cell line** and the same cell line **treated with compound X**.  
-The goal of this project is to identify **differentially expressed genes (DEGs)**, visualize them, and interpret their biological functions.
+**Dataset**
+The input dataset (Dataset.csv) should contain the following columns:
 
----
+**Column                           	     Description**
+Gene	                              Gene name/identifier
+log2FoldChange (Log2FC)	            Expression change (treated vs diseased)
+pvalue	                            Raw statistical significance
+padj	                              FDR-adjusted p-value (Benjamini–Hochberg correction, used to determine significance)
 
-## 📊 Dataset
-- Input: Quantified gene expression dataset from RNA-seq.
-- Columns include:
-  - **Gene** – Gene name/identifier  
-  - **Log2FC** – Log2 fold change (treated vs diseased)  
-  - **pvalue** – Statistical significance of expression change
-  - **padj** - padj — FDR-adjusted p-value calculated using Benjamini–Hochberg correction. Used as the primary measure to determine significant DEGs.
----
+**Analysis Workflow**
 
-## 🚀 Tasks Performed
-1. **Volcano Plot Generation**
-   - Visualized Log2FC vs. -log10(p-value)  
-   - Highlighted significantly upregulated (red) and downregulated (blue) genes based on adjusted p-value (padj)
-     
-2. **Identification of Differentially Expressed Genes**
-   - ** Upregulated genes: log2FoldChange > 1 and padj < 0.05`
-   - ** Downregulated genes: log2FoldChange < –1 and padj < 0.05`  
-   - **Red points = Upregulated | Blue points = Downregulated** 
+1. **Data Transformation**
+Converted essential columns to numeric (log2FoldChange, pvalue, padj)
+Created negLog10Padj = -log10(padj) for plotting
+Classified genes into three categories using thresholds:
+
+**Category	Condition**
+Upregulated	log2FoldChange > 1 & padj < 0.05
+Downregulated	log2FoldChange < -1 & padj < 0.05
+Not Significant	Otherwise
+Significance column stores this classification.
+
+2. **Count Up- and Down-Regulated Genes**
+The script prints the number of upregulated and downregulated genes.
 
 3. **Top DEGs**
-   - Extracted the **top 5 upregulated** and **top 5 downregulated** genes based on fold change.  
+Extracted the top 5 upregulated and top 5 downregulated genes based on log2 fold change.
 
-4. **Functional Interpretation**
+4. **Export Clean Gene Lists**
+CSV files are generated for easy sharing:
+Upregulated_Genes.csv
+Downregulated_Genes.csv
+Only relevant columns are saved: Gene, log2FoldChange, pvalue, padj, negLog10Padj, Significance.
+
+5. **Volcano Plot**
+X-axis: log2FoldChange
+Y-axis: -log10(padj)
+
+**Points are colored by Significance:**
+Red = Upregulated
+Blue = Downregulated
+Grey = Not Significant
+Threshold lines: log2FC ±1 and padj = 0.05
+The volcano plot is also saved as Volcano_Plot.png.
+
+ **Column Explanations**
+padj: Adjusted p-value from RNA-seq analysis (controls False Discovery Rate)
+negLog10Padj: Transformation for plotting; high values indicate stronger significance
+Significance: Derived column classifying genes as Upregulated, Downregulated, or Not Significant
+
+**Output Files**
+**File	                                    Description**
+Upregulated_Genes.csv	                  List of significantly upregulated genes
+Downregulated_Genes.csv	                List of significantly downregulated genes
+Volcano_Plot.png	                        Volcano plot of the dataset 
+
+5. **Functional Interpretation**
    - Queried **[GeneCards](https://www.genecards.org/)** to annotate functions of the top DEGs.  
 
 
-5.**Click here to view the Full Script - https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/29577dc9726636eaa3fc22e4af07946a8584c2f5/Script**
+6.**Click here to view the Full Script - https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/29577dc9726636eaa3fc22e4af07946a8584c2f5/Script**
 
 
-6.**Click here to view the Volcano Plot- https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/4804358afa091fe7e101364f92d3df247d114b2d/Volcano%20Plot.pdf**
+7.**Click here to view the Volcano Plot- https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/4804358afa091fe7e101364f92d3df247d114b2d/Volcano%20Plot.pdf**
 
 
-7.**Functions of the top 5 upregulated genes and top 5 downregulated genes**
+8.**Functions of the top 5 upregulated genes and top 5 downregulated genes**
                       
                        **Upregulated gene** 
 " EMILIN2 "   " POU3F4 "    " LOC285954 " " VEPH1 "     " DTHD1 "    
+
 
 **EMILIN2**
 
