@@ -21,8 +21,8 @@ The goal of this project is to identify **differentially expressed genes (DEGs)*
    - Highlighted significantly **upregulated** (red) and **downregulated** (blue) genes  
 
 2. **Identification of Differentially Expressed Genes**
-   - **Upregulated genes**: `Log2FC > 1` and `pvalue < 0.01`  
-   - **Downregulated genes**: `Log2FC < -1` and `pvalue < 0.01`
+   - ** Upregulated genes: log2FoldChange > 1 and padj < 0.05`
+   - ** Downregulated genes: log2FoldChange < –1 and padj < 0.05`  
    - **Red points = Upregulated | Blue points = Downregulated** 
 
 3. **Top DEGs**
