@@ -75,7 +75,7 @@ https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/38b782178ee
 
 ### **5. Volcano Plot**
 
-Generates **** with:
+Generates **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/3cbb04015e23143577b3ff7e781fc4c55b10de28/Volcano%20Plot.pdf** with:
 
 - **X-axis:** log2FoldChange  
 - **Y-axis:** -log10(padj)  
@@ -83,16 +83,6 @@ Generates **** with:
   - **Red** Upregulated  
   - **Blue** Downregulated  
   - **Grey**   Not Significant  
-
-Threshold lines:
-
-- log2FC = ±1  
-- padj = 0.05  
-
- Volcano Plot →  
-https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/4804358afa091fe7e101364f92d3df247d114b2d/Volcano%20Plot.pdf
-
----
 
 ## 📖 Column Explanations
 
