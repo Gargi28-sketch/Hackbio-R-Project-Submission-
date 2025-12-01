@@ -97,13 +97,10 @@ Generates **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob
    - Queried **[GeneCards](https://www.genecards.org/)** to annotate functions of the top DEGs.  
 
 
-6.**Click here to view the Full Script - https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/29577dc9726636eaa3fc22e4af07946a8584c2f5/Script**
+6.**Click here to view the Full Script -https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/2bdbced2425be5ff572c19955c48e4c97eb3ad0d/Script**
 
 
-7.**Click here to view the Volcano Plot- https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/4804358afa091fe7e101364f92d3df247d114b2d/Volcano%20Plot.pdf**
-
-
-8.**Functions of the top 5 upregulated genes and top 5 downregulated genes**
+7.**Functions of the top 5 upregulated genes and top 5 downregulated genes**
                       
                        **Upregulated gene** 
 " EMILIN2 "   " POU3F4 "    " LOC285954 " " VEPH1 "     " DTHD1 "    
