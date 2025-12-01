@@ -32,7 +32,7 @@ The goal of this project is to identify **differentially expressed genes (DEGs)*
    - Queried **[GeneCards](https://www.genecards.org/)** to annotate functions of the top DEGs.  
 
 
-5.**Click here to view the Full Script -https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/dd91408b73888cce93b68b498ffd66cfb72b1801/script.R**
+5.**Click here to view the Full Script -**
 
 
 6.**Click here to view the Volcano Plot- https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/d5413eecc72c15675e536543c8ef1f39588b5a54/Volcano%20Plot.pdf**
@@ -111,10 +111,6 @@ Required for the insulin-stimulated nuclear translocation and activation of MAPK
 - Predicted to enable integrin binding activity. Involved in positive regulation of sprouting angiogenesis; regulation of cell adhesion; and regulation of cell migration. 
 - During endochondral bone formation, inhibits proliferation and differentiation of proteoblasts mediated by canonical WNT signaling.
 - Expressed in most mammary tumors, may facilitate tumorigenesis by supporting the migratory behavior of breast cancer cells 
-
-
-
-
 
 
 
