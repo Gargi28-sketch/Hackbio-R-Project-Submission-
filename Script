@@ -1,24 +1,25 @@
+# ===========================
+# RNA-seq Differential Expression Analysis
+# ===========================
+
 # ---------------------------
 # STEP 1: Load Required Packages
 # ---------------------------
-
 install.packages("ggplot2")
 install.packages("dplyr")
 
 library(ggplot2)  # for visualization
 library(dplyr)    # for data manipulation
 
-
 # ---------------------------
 # STEP 2: Import the Dataset
 # ---------------------------
-# Replace with your actual CSV file path
+# Replace with your CSV file path
 data <- read.csv("C:/Users/dgdur/OneDrive/Desktop/Dataset.csv")
 
 # Quick check
 head(data)
 colnames(data)  # Should contain: Gene, log2FoldChange, pvalue, padj
-
 
 # ---------------------------
 # STEP 3: Basic Data Transformation
@@ -28,79 +29,77 @@ data$log2FoldChange <- as.numeric(data$log2FoldChange)
 data$pvalue <- as.numeric(data$pvalue)
 data$padj <- as.numeric(data$padj)
 
-# Transform p-values for volcano plot (-log10)
+# Transform padj for volcano plot (-log10)
 data$negLog10Padj <- -log10(data$padj)
 
-
 # ---------------------------
-# STEP 4: Classify Significance (Using Adjusted p-value)
+# STEP 4: Classify Significance
 # ---------------------------
-# Upregulated: Log2FC > 1 & padj < 0.05
-# Downregulated: Log2FC < -1 & padj < 0.05
-
+# Upregulated: log2FC > 1 & padj < 0.05
+# Downregulated: log2FC < -1 & padj < 0.05
 data$Significance <- ifelse(
   data$log2FoldChange > 1 & data$padj < 0.05, "Upregulated",
   ifelse(data$log2FoldChange < -1 & data$padj < 0.05, "Downregulated",
          "Not Significant")
 )
 
-# Count number of genes in each category
-table(data$Significance)
-
-
 # ---------------------------
-# STEP 5: Extract Upregulated & Downregulated Genes
+# STEP 5: Count Up- and Down-Regulated Genes
 # ---------------------------
-up_genes <- data %>% filter(Significance == "Upregulated")
-down_genes <- data %>% filter(Significance == "Downregulated")
+num_up <- sum(data$log2FoldChange > 1 & data$padj < 0.05)
+num_down <- sum(data$log2FoldChange < -1 & data$padj < 0.05)
 
+cat("Number of Upregulated Genes:", num_up, "\n")
+cat("Number of Downregulated Genes:", num_down, "\n")
 
 # ---------------------------
-# STEP 6: Print Top 5 Genes
+# STEP 6: Extract Up- and Down-Regulated Genes
 # ---------------------------
-cat("Top 5 Upregulated Genes:\n")
+up_genes <- data[data$Significance == "Upregulated", ]
+down_genes <- data[data$Significance == "Downregulated", ]
+
+# ---------------------------
+# STEP 7: Print Top 5 Genes
+# ---------------------------
+cat("\nTop 5 Upregulated Genes:\n")
 print(head(up_genes$Gene, 5))
 
 cat("\nTop 5 Downregulated Genes:\n")
 print(head(down_genes$Gene, 5))
 
+# ---------------------------
+# STEP 8: Save Clean CSV Files
+# ---------------------------
+# Select only relevant columns
+cols_to_save <- c("Gene", "log2FoldChange", "pvalue", "padj", "negLog10Padj", "Significance")
+
+write.csv(up_genes[, cols_to_save], "Upregulated_Genes.csv", row.names = FALSE)
+write.csv(down_genes[, cols_to_save], "Downregulated_Genes.csv", row.names = FALSE)
+
+cat("\nCSV files saved to:", getwd(), "\n")
 
 # ---------------------------
-# STEP 7: Volcano Plot (Using Adjusted p-values)
+# STEP 9: Volcano Plot
 # ---------------------------
-
-volcano <- ggplot(data, aes(x = log2FoldChange, 
-                            y = negLog10Padj, 
-                            color = Significance)) +
-  
+volcano <- ggplot(data, aes(x = log2FoldChange, y = negLog10Padj, color = Significance)) +
   geom_point(alpha = 0.8, size = 2) +
-  
-  scale_color_manual(values = c(
-    "Upregulated" = "red",
-    "Downregulated" = "blue",
-    "Not Significant" = "grey"
-  )) +
-  
+  scale_color_manual(values = c("Upregulated" = "red",
+                                "Downregulated" = "blue",
+                                "Not Significant" = "grey")) +
   geom_vline(xintercept = c(-1, 1), linetype = "dashed") +
   geom_hline(yintercept = -log10(0.05), linetype = "dashed") +
-  
   theme_minimal() +
-  
-  labs(
-    title = "Volcano Plot of RNA-seq Data (Using padj)",
-    x = "Log2 Fold Change",
-    y = "-Log10(Adjusted p-value)"
-  ) +
-  
+  labs(title = "Volcano Plot of RNA-seq Data",
+       x = "Log2 Fold Change",
+       y = "-Log10(Adjusted p-value)") +
   theme(plot.title = element_text(hjust = 0.5))
 
-# Display the volcano plot
+# Display the plot
 print(volcano)
 
+# ---------------------------
+# Optional: Save the plot as PNG
+# ---------------------------
+ggsave("Volcano_Plot.png", plot = volcano, width = 8, height = 6)
 
-# ---------------------------
-# STEP 8: Save Full Lists 
-# ---------------------------
-write.csv(up_genes, "Upregulated_Genes.csv", row.names = FALSE)
-write.csv(down_genes, "Downregulated_Genes.csv", row.names = FALSE)
 
