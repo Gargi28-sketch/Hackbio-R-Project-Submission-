@@ -32,7 +32,7 @@ The goal of this project is to identify **differentially expressed genes (DEGs)*
    - Queried **[GeneCards](https://www.genecards.org/)** to annotate functions of the top DEGs.  
 
 
-5.**Click here to view the Full Script -**
+5.**Click here to view the Full Script -**Script**
 
 
 6.**Click here to view the Volcano Plot- https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/d5413eecc72c15675e536543c8ef1f39588b5a54/Volcano%20Plot.pdf**
