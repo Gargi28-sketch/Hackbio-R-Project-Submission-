@@ -11,15 +11,14 @@ The goal of this project is to identify **differentially expressed genes (DEGs)*
   - **Gene** – Gene name/identifier  
   - **Log2FC** – Log2 fold change (treated vs diseased)  
   - **pvalue** – Statistical significance of expression change
-  - **padj** - (Adjusted p-value / FDR) Corrected version of the p-value that accounts for multiple hypothesis testing.
-
+  - **padj** - padj — FDR-adjusted p-value calculated using Benjamini–Hochberg correction. Used as the primary measure to determine significant DEGs.
 ---
 
 ## 🚀 Tasks Performed
 1. **Volcano Plot Generation**
    - Visualized Log2FC vs. -log10(p-value)  
-   - Highlighted significantly **upregulated** (red) and **downregulated** (blue) genes  
-
+   - Highlighted significantly upregulated (red) and downregulated (blue) genes based on adjusted p-value (padj)
+     
 2. **Identification of Differentially Expressed Genes**
    - ** Upregulated genes: log2FoldChange > 1 and padj < 0.05`
    - ** Downregulated genes: log2FoldChange < –1 and padj < 0.05`  
