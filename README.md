@@ -1,35 +1,35 @@
-# **RNA-seq Differential Expression Analysis**
+# 🧬 RNA-seq Differential Expression Analysis
 
-This repository contains an analysis comparing a **diseased cell line** with the **same cell line treated with compound X**.  
-The goal is to identify **differentially expressed genes (DEGs)**, generate a **volcano plot**, and interpret the top significant genes.
+This repository contains an analysis comparing a **diseased cell line** with the **same cell line treated with Compound X**.  
+The goal is to identify **differentially expressed genes (DEGs)**, generate a volcano plot, and interpret the top significant genes.
 
 ---
 
-## **Dataset**
+## 📁 Dataset
 
-The input file `Dataset.csv` must contain the following columns:
+The input file **Dataset.csv** must contain the following columns:
 
-| **Column**                  | **Description** |
-|-----------------------------|------------------|
-| **Gene**                    | Gene name or identifier |
+| Column | Description |
+|--------|-------------|
+| **Gene** | Gene name or identifier |
 | **log2FoldChange (log2FC)** | Expression change (treated vs diseased) |
-| **pvalue**                  | Raw statistical significance |
-| **padj**                    | FDR-adjusted p-value |
+| **pvalue** | Raw statistical significance |
+| **padj** | FDR-adjusted p-value |
 
 ---
 
-## **Analysis Workflow**
+## 🧪 Analysis Workflow
 
 ### **1. Data Transformation**
 
-- Converted the columns **log2FoldChange**, **pvalue**, and **padj** into numeric values  
-- Created: **negLog10Padj = -log10(padj)**  
+- Converted `log2FoldChange`, `pvalue`, and `padj` into numeric  
+- Created: `negLog10Padj = -log10(padj)`  
 - Classified genes based on thresholds:
 
-| **Category**        | **Condition** |
-|---------------------|---------------|
-| **Upregulated**     | log2FoldChange > 1 and padj < 0.05 |
-| **Downregulated**   | log2FoldChange < -1 and padj < 0.05 |
+| Category | Condition |
+|----------|-----------|
+| **Upregulated** | log2FoldChange > 1 and padj < 0.05 |
+| **Downregulated** | log2FoldChange < -1 and padj < 0.05 |
 | **Not Significant** | Otherwise |
 
 A column named **Significance** stores this classification.
@@ -37,16 +37,17 @@ A column named **Significance** stores this classification.
 ---
 
 ### **2. Count of Upregulated and Downregulated Genes**
-
 The script prints the number of:
-- **Upregulated genes**  
-- **Downregulated genes**
+
+- Upregulated genes  
+- Downregulated genes  
 
 ---
 
 ### **3. Top Differentially Expressed Genes**
 
 Extracts:
+
 - **Top 5 upregulated genes**
 - **Top 5 downregulated genes**
 
@@ -56,53 +57,50 @@ based on highest absolute log2 fold change.
 
 ### **4. Exported Gene Lists**
 
-The following files are created:
+| File | Description |
+|------|-------------|
+| **Upregulated_Genes.csv** | Significantly upregulated genes |
+| **Downregulated_Genes.csv** | Significantly downregulated genes |
 
-| **File**                    | **Description** |
-|-----------------------------|------------------|
-| **Upregulated_Genes.csv**   | List of significantly upregulated genes | 
-| **Downregulated_Genes.csv** | List of significantly downregulated genes |
+**Columns included**:  
+`Gene, log2FoldChange, pvalue, padj, negLog10Padj, Significance`
 
-Columns included:  
-**Gene, log2FoldChange, pvalue, padj, negLog10Padj, Significance**
-**Upregulated_Genes.csv**- Refer to the csv file **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/38b782178ee22bb2bfd5f425b1619f1efca77d6a/Downregulated_Genes.csv**
-**Downregulated_Genes.csv** - Refer to the csv file **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/6d7ee79c0a80d9d89537a23c8f32494823c03b0f/Upregulated_Genes.csv**
+**Upregulated genes** →  
+https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/6d7ee79c0a80d9d89537a23c8f32494823c03b0f/Upregulated_Genes.csv
+
+**Downregulated genes** →  
+https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/38b782178ee22bb2bfd5f425b1619f1efca77d6a/Downregulated_Genes.csv
+
 ---
 
 ### **5. Volcano Plot**
 
-Generates a volcano plot (**Volcano_Plot.png**) with:
+Generates **** with:
 
 - **X-axis:** log2FoldChange  
-- **Y-axis:** -log10(padj)
-- **Colors:**
-  - Red = Upregulated  
-  - Blue = Downregulated  
-  - Grey = Not Significant  
-- **Threshold lines:**  
-  - log2FC = ±1  
-  - padj = 0.05  
+- **Y-axis:** -log10(padj)  
+- **Colors:**  
+  - **Red** Upregulated  
+  - **Blue** Downregulated  
+  - **Grey**   Not Significant  
+
+Threshold lines:
+
+- log2FC = ±1  
+- padj = 0.05  
+
+ Volcano Plot →  
+https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/4804358afa091fe7e101364f92d3df247d114b2d/Volcano%20Plot.pdf
 
 ---
 
-## **Column Explanations**
+## 📖 Column Explanations
 
-| **Column**       | **Meaning** |
-|------------------|-------------|
-| **padj**         | Adjusted p-value controlling FDR |
+| Column | Meaning |
+|--------|---------|
+| **padj** | Adjusted p-value controlling FDR |
 | **negLog10Padj** | -log10 transformed p-value |
-| **Significance** | Upregulated, Downregulated, or Not Significant |
-
----
-
-## **Output Files**
-
-| **File**                    | **Description** |
-|-----------------------------|------------------|
-| **Upregulated_Genes.csv**   | Significantly upregulated genes |
-| **Downregulated_Genes.csv** | Significantly downregulated genes |
-| **Volcano_Plot.png**        | Volcano plot visualization |
-
+| **Significance** | Upregulated / Downregulated / Not Significant |
 
 
 5. **Functional Interpretation**
