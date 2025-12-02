@@ -75,7 +75,7 @@ https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/38b782178ee
 
 ### **5. Volcano Plot**
 
-Generates **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/3cbb04015e23143577b3ff7e781fc4c55b10de28/Volcano%20Plot.pdf** with:
+Generates **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/c3ae03da4ad4059ddcffbb7c8519e24e121d4576/volcano%20plot.png** with:
 
 - **X-axis:** log2FoldChange  
 - **Y-axis:** -log10(padj)  
