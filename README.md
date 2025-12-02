@@ -1,11 +1,11 @@
-# 🧬 RNA-seq Differential Expression Analysis
+#  RNA-seq Differential Expression Analysis
 
 This repository contains an analysis comparing a **diseased cell line** with the **same cell line treated with Compound X**.  
 The goal is to identify **differentially expressed genes (DEGs)**, generate a volcano plot, and interpret the top significant genes.
 
 ---
 
-## 📁 Dataset
+##  Dataset
 
 The input file **Dataset.csv** must contain the following columns:
 
@@ -18,7 +18,7 @@ The input file **Dataset.csv** must contain the following columns:
 
 ---
 
-## 🧪 Analysis Workflow
+##  Analysis Workflow
 
 ### **1. Data Transformation**
 
