@@ -1,6 +1,5 @@
 #  RNA-seq Differential Expression Analysis
-This repository contains an analysis comparing a **diseased cell line** with the **same cell line treated with Compound X**.  
-The goal is to identify **differentially expressed genes (DEGs)**, generate a volcano plot, and interpret the top significant genes.
+**To identify **differentially expressed genes (DEGs)**, generate a volcano plot, and interpret the top significant genes.
 ---
 ## Dataset
 The input file **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/e09c71a3d4bca0dc5761d7f797bda8f3114802e4/Dataset.csv** 
@@ -51,7 +50,7 @@ Extracts:
 
 ### 5. Volcano Plot
 
-Generates a volcano plot: 
+Generates a volcano plot: **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/a3522b5f830a04c01d8d2c43e5b1c863373345a4/Volcano%20Plot.png**
 
 - **X-axis:** log2FoldChange  
 - **Y-axis:** -log10(pvalue)  
