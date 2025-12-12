@@ -60,18 +60,23 @@ Generates a volcano plot: **https://github.com/Gargi28-sketch/Hackbio-R-Project-
 
 ## Column Explanations
 
-| Column | Meaning |
-|--------|---------|
-| **pvalue** | Raw statistical significance of differential expression |
-| **negLog10Pvalue** | -log10 transformed p-value |
-| **Significance** | Gene classification: Upregulated / Downregulated / Not Significant |
+## Column Explanations
+
+| Column | Description |
+|--------|-------------|
+| **Gene** | The name or identifier of the gene being analyzed. |
+| **log2FoldChange** | The log2-transformed fold change in expression between treated and diseased samples. Positive values indicate upregulation, negative values indicate downregulation. |
+| **pvalue** | The raw p-value indicating the statistical significance of the expression change. Smaller values mean more significant changes. |
+| **negLog10Pvalue** | The negative log10 transformation of the p-value (`-log10(pvalue)`). This is used for volcano plots so that smaller p-values appear higher on the Y-axis. |
+| **Significance** | Classification of each gene based on thresholds: "Upregulated" (log2FC > 1 & pvalue < 0.01), "Downregulated" (log2FC < -1 & pvalue < 0.01), or "Not Significant". |
+
 
 
 5. **Functional Interpretation**
    - Queried **[GeneCards](https://www.genecards.org/)** to annotate functions of the top DEGs.  
 
 
-6.**Click here to view the Full Script -https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/4237be6f63ff53508305053737874e23513636ae/Script**
+6.**Click here to view the Full Script -https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/32cc42ba7e4e0bbe841d257782f32df9abc6db7f/Script**
 
 
 7.**Functions of the top 5 upregulated genes and top 5 downregulated genes**
