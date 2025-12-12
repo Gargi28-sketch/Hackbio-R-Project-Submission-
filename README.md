@@ -41,15 +41,10 @@ Extracts:
 
 ### 4. Exported Gene Lists
 
-| File | Description |
-|------|-------------|
-| **Upregulated_Genes.csv** | Significantly upregulated genes |
-| **Downregulated_Genes.csv** | Significantly downregulated genes |
-
 **Columns included:**  
 `Gene`, `log2FoldChange`, `pvalue`, `negLog10Pvalue`, `Significance`
 
-**Upregulated genes CSV** → 
+**Upregulated genes CSV** → **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/c91af0f62a11f583f15daa03c6d3fca28ccdb10c/Downregulated_Genes.csv**
 **Downregulated genes CSV** → 
 
 ---
