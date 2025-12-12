@@ -1,42 +1,28 @@
 #  RNA-seq Differential Expression Analysis
-
 This repository contains an analysis comparing a **diseased cell line** with the **same cell line treated with Compound X**.  
 The goal is to identify **differentially expressed genes (DEGs)**, generate a volcano plot, and interpret the top significant genes.
+---
+## Dataset
+The input file ** ** 
 
 ---
 
-##  Dataset
+## Analysis Workflow
 
-The input file **Dataset.csv** must contain the following columns:
+### 1. Data Transformation
 
-| Column | Description |
-|--------|-------------|
-| **Gene** | Gene name or identifier |
-| **log2FoldChange (log2FC)** | Expression change (treated vs diseased) |
-| **pvalue** | Raw statistical significance |
-| **padj** | FDR-adjusted p-value |
-
----
-
-##  Analysis Workflow
-
-### **1. Data Transformation**
-
-- Converted `log2FoldChange`, `pvalue`, and `padj` into numeric  
-- Created: `negLog10Padj = -log10(padj)`  
+- Converted `log2FoldChange` and `pvalue` to numeric.  
+- Created `negLog10Pvalue = -log10(pvalue)` for visualization.  
 - Classified genes based on thresholds:
 
 | Category | Condition |
 |----------|-----------|
-| **Upregulated** | log2FoldChange > 1 and padj < 0.05 |
-| **Downregulated** | log2FoldChange < -1 and padj < 0.05 |
+| **Upregulated** | log2FoldChange > 1 & pvalue < 0.01 |
+| **Downregulated** | log2FoldChange < -1 & pvalue < 0.01 |
 | **Not Significant** | Otherwise |
 
-A column named **Significance** stores this classification.
+### 2. Count of Upregulated and Downregulated Genes
 
----
-
-### **2. Count of Upregulated and Downregulated Genes**
 The script prints the number of:
 
 - Upregulated genes  
@@ -44,53 +30,50 @@ The script prints the number of:
 
 ---
 
-### **3. Top Differentially Expressed Genes**
+### 3. Top Differentially Expressed Genes
 
 Extracts:
 
-- **Top 5 upregulated genes**
-- **Top 5 downregulated genes**
-
-based on highest absolute log2 fold change.
+- **Top 5 upregulated genes**  
+- **Top 5 downregulated genes**  
 
 ---
 
-### **4. Exported Gene Lists**
+### 4. Exported Gene Lists
 
 | File | Description |
 |------|-------------|
 | **Upregulated_Genes.csv** | Significantly upregulated genes |
 | **Downregulated_Genes.csv** | Significantly downregulated genes |
 
-**Columns included**:  
-`Gene, log2FoldChange, pvalue, padj, negLog10Padj, Significance`
+**Columns included:**  
+`Gene`, `log2FoldChange`, `pvalue`, `negLog10Pvalue`, `Significance`
 
-**Upregulated genes** →  
-https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/6d7ee79c0a80d9d89537a23c8f32494823c03b0f/Upregulated_Genes.csv
-
-**Downregulated genes** →  
-https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/38b782178ee22bb2bfd5f425b1619f1efca77d6a/Downregulated_Genes.csv
+**Upregulated genes CSV** → 
+**Downregulated genes CSV** → 
 
 ---
 
-### **5. Volcano Plot**
+### 5. Volcano Plot
 
-Generates **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/c3ae03da4ad4059ddcffbb7c8519e24e121d4576/volcano%20plot.png** with:
+Generates a volcano plot: 
 
 - **X-axis:** log2FoldChange  
-- **Y-axis:** -log10(padj)  
+- **Y-axis:** -log10(pvalue)  
 - **Colors:**  
-  - **Red** Upregulated  
-  - **Blue** Downregulated  
-  - **Grey**   Not Significant  
+  - **Red:** Upregulated  
+  - **Blue:** Downregulated  
+  - **Grey:** Not Significant  
 
-## 📖 Column Explanations
+---
+
+## Column Explanations
 
 | Column | Meaning |
 |--------|---------|
-| **padj** | Adjusted p-value controlling FDR |
-| **negLog10Padj** | -log10 transformed p-value |
-| **Significance** | Upregulated / Downregulated / Not Significant |
+| **pvalue** | Raw statistical significance of differential expression |
+| **negLog10Pvalue** | -log10 transformed p-value |
+| **Significance** | Gene classification: Upregulated / Downregulated / Not Significant |
 
 
 5. **Functional Interpretation**
