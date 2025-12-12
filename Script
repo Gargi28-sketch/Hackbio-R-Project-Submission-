@@ -50,6 +50,11 @@ cat("Number of Downregulated Genes:", num_down, "\n")
 up_genes <- data[data$Significance == "Upregulated", ]
 down_genes <- data[data$Significance == "Downregulated", ]
 
+
+# Save as CSV
+write.csv(up_genes, "Upregulated_Genes.csv", row.names = FALSE)
+write.csv(down_genes, "Downregulated_Genes.csv", row.names = FALSE)
+
 # ---------------------------
 # STEP 7: Print Top 5 Genes
 # ---------------------------
@@ -58,6 +63,7 @@ print(head(up_genes$Gene, 5))
 
 cat("\nTop 5 Downregulated Genes:\n")
 print(head(down_genes$Gene, 5))
+
 
 # ---------------------------
 # STEP 8: Volcano Plot
