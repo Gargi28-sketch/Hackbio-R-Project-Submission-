@@ -80,7 +80,7 @@ Generates a volcano plot:
    - Queried **[GeneCards](https://www.genecards.org/)** to annotate functions of the top DEGs.  
 
 
-6.**Click here to view the Full Script -https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/30e0d039c1f7cb5f52ca0be2f5225a618e233df7/Script**
+6.**Click here to view the Full Script -https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/c709128f4ad3e07c7d3fe997bb30dd975e50f424/Script**
 
 
 7.**Functions of the top 5 upregulated genes and top 5 downregulated genes**
