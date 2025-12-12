@@ -1,5 +1,5 @@
 #  RNA-seq Differential Expression Analysis
-**To identify **differentially expressed genes (DEGs)**, generate a volcano plot, and interpret the top significant genes.
+**To identify **differentially expressed genes (DEGs)**, generate a volcano plot, and interpret the top significant genes.**
 ---
 ## Dataset
 The input file **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/e09c71a3d4bca0dc5761d7f797bda8f3114802e4/Dataset.csv** 
@@ -23,20 +23,16 @@ The input file **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-
 ### 2. Count of Upregulated and Downregulated Genes
 
 The script prints the number of:
-
 - Upregulated genes  
 - Downregulated genes  
-
 ---
 
 ### 3. Top Differentially Expressed Genes
 
 Extracts:
-
 - **Top 5 upregulated genes**  
 - **Top 5 downregulated genes**  
 
----
 
 ### 4. Exported Gene Lists
 
