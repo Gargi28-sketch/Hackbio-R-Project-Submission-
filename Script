@@ -2,6 +2,7 @@
 # RNA-seq Differential Expression Analysis
 # ===========================
 
+# STEP 1: Import Required Package 
 install.packages("ggplot2")
 install.packages("dplyr")
 
@@ -27,7 +28,6 @@ data$negLog10Pvalue <- -log10(data$pvalue)
 
 # ---------------------------
 # STEP 4: Classify Genes 
-# (as per question requirement)
 # ---------------------------
 data$Significance <- ifelse(
   data$log2FoldChange > 1 & data$pvalue < 0.01, "Upregulated",
@@ -45,18 +45,18 @@ cat("Number of Upregulated Genes:", num_up, "\n")
 cat("Number of Downregulated Genes:", num_down, "\n")
 
 # ---------------------------
-# STEP 6: Extract Genes (NO PIPE USED)
+# STEP 6: Extract Genes 
 # ---------------------------
 up_genes <- data[data$Significance == "Upregulated", ]
 down_genes <- data[data$Significance == "Downregulated", ]
 
 
-# Save as CSV
+# STEP 7: Save as CSV
 write.csv(up_genes, "Upregulated_Genes.csv", row.names = FALSE)
 write.csv(down_genes, "Downregulated_Genes.csv", row.names = FALSE)
 
 # ---------------------------
-# STEP 7: Print Top 5 Genes
+# STEP 8: Print Top 5 Genes
 # ---------------------------
 cat("\nTop 5 Upregulated Genes:\n")
 print(head(up_genes$Gene, 5))
@@ -66,7 +66,7 @@ print(head(down_genes$Gene, 5))
 
 
 # ---------------------------
-# STEP 8: Volcano Plot
+# STEP 9: Volcano Plot
 # ---------------------------
 ggplot(data, aes(x = log2FoldChange, y = negLog10Pvalue, color = Significance)) +
   geom_point(alpha = 0.8, size = 2) +
