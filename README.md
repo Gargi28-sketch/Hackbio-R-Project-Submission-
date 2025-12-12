@@ -40,6 +40,7 @@ Extracts:
 `Gene`, `log2FoldChange`, `pvalue`, `negLog10Pvalue`, `Significance`
 
 **Upregulated genes CSV** → **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/c91af0f62a11f583f15daa03c6d3fca28ccdb10c/Downregulated_Genes.csv**
+
 **Downregulated genes CSV** → **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/8cea4c1864e9bf63b39484a511f0c61f086091bf/Upregulated_Genes.csv**
 
 ---
@@ -70,7 +71,7 @@ Generates a volcano plot: **https://github.com/Gargi28-sketch/Hackbio-R-Project-
    - Queried **[GeneCards](https://www.genecards.org/)** to annotate functions of the top DEGs.  
 
 
-6.**Click here to view the Full Script -https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/c709128f4ad3e07c7d3fe997bb30dd975e50f424/Script**
+6.**Click here to view the Full Script -https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/4237be6f63ff53508305053737874e23513636ae/Script**
 
 
 7.**Functions of the top 5 upregulated genes and top 5 downregulated genes**
