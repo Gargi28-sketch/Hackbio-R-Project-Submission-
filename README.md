@@ -45,7 +45,7 @@ Extracts:
 `Gene`, `log2FoldChange`, `pvalue`, `negLog10Pvalue`, `Significance`
 
 **Upregulated genes CSV** → **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/c91af0f62a11f583f15daa03c6d3fca28ccdb10c/Downregulated_Genes.csv**
-**Downregulated genes CSV** → 
+**Downregulated genes CSV** → **https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/8cea4c1864e9bf63b39484a511f0c61f086091bf/Upregulated_Genes.csv**
 
 ---
 
