@@ -75,9 +75,11 @@ The identified upregulated and downregulated genes were exported as separate CSV
 
 A summary table containing the total number and percentage of genes in each category was also generated:
 
-
 **DEG Summary Table:**  
 [DEG_Summary.csv](https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/21d9932739d5c0d014ff270fa038b7bd6e0793fa/RNA-seq-Differential-Expression-Analysis/DEG_Summary.csv)
+
+**DEG Summary Plot:**  
+[DEG plot.pdf](https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/b9e97e9f979cfe38bd28e5d26463bb28f0c20914/RNA-seq-Differential-Expression-Analysis/DEG%20plot.pdf)
 
 ---
 
