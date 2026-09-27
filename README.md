@@ -68,10 +68,10 @@ The identified upregulated and downregulated genes were exported as separate CSV
 `Gene`, `log2FoldChange`, `pvalue`, `negLog10Pvalue`, `Significance`
 
 **Upregulated Genes:**  
-[Upregulated_Genes.csv](https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/8cea4c1864e9bf63b39484a511f0c61f086091bf/Upregulated_Genes.csv)
+[Upregulated_Genes.csv](https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/f95f6ec2402f8ff4694c15ee567d4b8e3d8f6bfa/RNA-seq-Differential-Expression-Analysis/Upregulated_Genes.csv)
 
 **Downregulated Genes:**  
-[Downregulated_Genes.csv](https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/c91af0f62a11f583f15daa03c6d3fca28ccdb10c/Downregulated_Genes.csv)
+[Downregulated_Genes.csv](https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/f95f6ec2402f8ff4694c15ee567d4b8e3d8f6bfa/RNA-seq-Differential-Expression-Analysis/Downregulated_Genes.csv)
 
 A summary table containing the total number and percentage of genes in each category was also generated:
 
@@ -87,7 +87,7 @@ A summary table containing the total number and percentage of genes in each cate
 
 A volcano plot was generated to visualize gene expression changes and statistical significance.
 
-**[View Volcano Plot](https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/a3522b5f830a04c01d8d2c43e5b1c863373345a4/Volcano%20Plot.png)**
+**[View Volcano Plot](https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/f95f6ec2402f8ff4694c15ee567d4b8e3d8f6bfa/RNA-seq-Differential-Expression-Analysis/Volcano%20plot.pdf)**
 
 The plot contains:
 
