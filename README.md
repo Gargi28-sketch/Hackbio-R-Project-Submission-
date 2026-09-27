@@ -231,7 +231,7 @@ The following genes were identified among the top upregulated and downregulated 
 The complete R script used for the analysis is available here:
 
 ### R Script
-**[View Full R Script](https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission--RNA-seq-Differential-Expression-Analysis/blob/42d888b25f784ae99829e014a4e22134176c90a0/Script)**
+**[View Full R Script](https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/d465f70c837c584d6c55b6d349d331b9d1d753f9/RNA-seq-Differential-Expression-Analysis/Script.R)**
 
 The script includes:
 
