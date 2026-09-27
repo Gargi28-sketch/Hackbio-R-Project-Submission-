@@ -77,10 +77,8 @@ A summary table containing the total number and percentage of genes in each cate
 
 
 **DEG Summary Table:**  
-[DEG_Summary.csv](https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission--RNA-seq-Differential-Expression-Analysis/blob/2810d07d9b1b01f314bd3150d5357100e0887eec/DEG_Summary.csv)
+[DEG_Summary.csv](https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission-/blob/21d9932739d5c0d014ff270fa038b7bd6e0793fa/RNA-seq-Differential-Expression-Analysis/DEG_Summary.csv)
 
-**DEG Summary Plot:**  
-[DEG plot.pdf](https://github.com/Gargi28-sketch/Hackbio-R-Project-Submission--RNA-seq-Differential-Expression-Analysis/blob/2810d07d9b1b01f314bd3150d5357100e0887eec/DEG%20plot.pdf)
 ---
 
 ### 5. Volcano Plot
