@@ -1,0 +1,18 @@
+## Project Context
+
+This project was completed as part of the **BioinformHER R Programming / Bioinformatics training program**.
+
+### Project: RNA-seq Differential Expression Analysis
+
+This project analyzes processed RNA-seq gene expression data from a diseased cell line and a diseased cell line treated with compound X. The analysis uses R to identify differentially expressed genes based on log2 fold change and p-value.
+
+### Tasks
+
+* Generate a volcano plot.
+* Identify upregulated genes using `Log2FC > 1` and `pvalue < 0.01`.
+* Identify downregulated genes using `Log2FC < -1` and `pvalue < 0.01`.
+* Investigate the functions of the top 5 upregulated and top 5 downregulated genes using GeneCards.
+
+**Organization:** BioinformHER
+**Tools:** R, ggplot2, dplyr, GeneCards
+
